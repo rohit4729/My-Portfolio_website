@@ -5,8 +5,216 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title> Rohit- Personal Portfolio</title>
+<style>
+  :root {
+            --primary-color: #2c3e50; /* Dark Blue/Grey */
+            --accent-color: #2980b9; /* Bright Blue */
+            --text-color: #333;
+            --light-text: #666;
+            --bg-color: #f4f4f4;
+            --paper-color: #ffffff;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Resume Container - A4 Shape */
+        .resume-container {
+            background-color: var(--paper-color);
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Sidebar | Main */
+            min-height: 800px;
+        }
+
+        /* Left Column (Sidebar) */
+        .left-col {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-right: 1px solid #eee;
+        }
+
+        /* Right Column (Main) */
+        .right-col {
+            padding: 30px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h3.section-title {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        /* Skills Lists */
+        .skills-category {
+            margin-bottom: 15px;
+        }
+        
+        .skills-category h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            color: var(--accent-color);
+        }
+
+        ul.skills-list {
+            list-style: none;
+        }
+
+        ul.skills-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        ul.skills-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        /* Projects & Experience */
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        .project-link {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .education-item h4 {
+            font-size: 1rem;
+        }
+        
+        .school-name {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .grad-date {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            font-style: italic;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .left-col {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+</style>
   <!--
     - favicon
   -->
@@ -78,7 +286,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:rohitmandal4729@gmail.com" class="contact-link">rohitmandal4729@gmail.com</a>
+              <a href="https://mail.google.com/mail/u/0/#sent" class="contact-link">rohitmandal4729@gmail.com</a>
             </div>
 
           </li>
@@ -146,7 +354,7 @@
           </li>
 
           <li class="social-item">
-            <a href="mailto:rohitmandal4729@gmail.com<" class="social-link">
+            <a href="https://mail.google.com/mail/u/0/#sent" class="social-link">
               <ion-icon name="mail-outline"></ion-icon>
             </a>
           </li>
@@ -435,7 +643,7 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-        <section class="timeline">
+        <!-- <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -443,15 +651,15 @@
             </div>
 
             <h3 class="h3">Education</h3>
-          </div>
+          </div> 
 
-          <ol class="timeline-list">
+           <ol class="timeline-list">
 
-            <li class="timeline-item">
+             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Wainganga Collge of Engineering and Management, Nagpur</h4>
 
-              <span>2023 — 2026</span>
+              <span>2022 — 2026</span>
 
               <p class="timeline-text">
                 Currently undertaking B.Tech in Computer Science and Engineering, where I am honing my expertise in
@@ -459,7 +667,7 @@
                 research-driven projects, coding challenges, and collaborative technical events."
               </p>
 
-            </li>
+            </li> 
 
             <li class="timeline-item">
 
@@ -473,7 +681,7 @@
                 experience in web technologies
               </p>
 
-            </li>
+            </li> 
 
 
 
@@ -481,9 +689,9 @@
 
           </ol>
 
-        </section>
+        </section> -->
 
-        <section class="timeline">
+        <!-- <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
@@ -517,8 +725,132 @@
 
           </ol>
 
-        </section>
+        </section> -->
 
+        <div class="resume-container">
+        <header>
+            <h1>Rohit Mandal</h1>
+            <h2>DevOps Engineer</h2>
+            <div class="contact-info">
+                <a href="https://mail.google.com/mail/u/0/#sent"><i class="fas fa-envelope"></i> rohitmandal4729@gmail.com</a>
+                <a href="tel:+918261018061"><i class="fas fa-phone"></i> +91 8261018061</a>
+                <a href="https://linkedin.com/in/rohit-mandal-a07a01291" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/rohit4729" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <!-- <a href="https://rohitmandal.shop" target="_blank"><i class="fas fa-globe"></i> Portfolio</a> -->
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="left-col">
+                
+                <section>
+                    <h3 class="section-title">Technical Skills</h3>
+                    
+                    <div class="skills-category">
+                        <h4>DevOps & Tools</h4>
+                        <ul class="skills-list">
+                            <li>Docker & Kubernetes</li>
+                            <li>Jenkins (CI/CD)</li>
+                            <li>Terraform & Ansible</li>
+                            <li>Git & GitHub</li>
+                            <li>Grafana & Prometheus</li>
+                            <li>Linux (Red Hat, Ubuntu)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>Cloud Computing</h4>
+                        <ul class="skills-list">
+                            <li>AWS (Amazon Web Services)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-category">
+                        <h4>Programming</h4>
+                        <ul class="skills-list">
+                            <li>HTML / CSS / Bootstrap</li>
+                            <li>Python (Basics)</li>
+                            <li>JavaScript (Basics)</li>
+                            <li>Java (Basics)</li>
+                            <li>C (Basics)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="section-title">Certifications</h3>
+                    <div class="education-item">
+                        <h4>DevOps Course</h4>
+                        <p class="grad-date">with AWS Solution Architect - Associate</p>
+                        <a href="https://www.credly.com/badges" class="project-link">View Credly Badge</a>
+                    </div>
+                </section>
+
+            </aside>
+
+            <section class="right-col">
+                
+                <section>
+                    <h3 class="section-title">Projects</h3>
+                    
+                    <div class="project-ite">
+                        <h4>1. CI/CD Pipeline Automation</h4>
+                        <p class="project-desc">
+                            Demonstrated a fully automated CI/CD pipeline that builds, tests, packages, and deploys a containerized web application using Jenkins, Docker Hub, GitHub Webhooks, and Amazon EKS.
+                        </p>
+                        <a href="https://github.com/rohit4729/CI-CD_Pipelining_Automation_DevOps" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> github.com/rohit4729/CI-CD_Pipelining
+                        </a>
+                    </div>
+
+                    <div class="project-ite">
+                        <h4>2. Three-Tier Web Application Deployment</h4>
+                        <p class="project-desc">
+                            Orchestrated a classic three-tier web application architecture using Docker for image creation and Kubernetes for deployment, scaling, and networking.
+                        </p>
+                        <a href="https://github.com/rohit4729/Three-tier_Well_Application_Deployment-By-K8s" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> github.com/rohit4729/Three-tier...
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="section-title">Education</h3>
+                    
+                    <div class="education-item">
+                        <div class="school-name">Wainganga College of Engineering & Management</div>
+                        <h4>B-Tech in Computer Science and Engineering</h4>
+                        <p class="grad-date">Nagpur University |Graduation Year: Expected May 2026</p>
+                        <p><strong>Average SGPA:</strong> 6.5</p>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="school-name">Inspire Institute of Chandrapur</div>
+                        <h4>JEE (PCM)</h4>
+                        <p class="grad-date">2022 | Score: 68%</p>
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
+<!-- Key Features of this Code:
+[cite_start]
+
+Source Mapping: I have accurately mapped your skills [cite_start], projects [cite_start], and education  into the correct HTML sections.   
+
+Professional Layout: Uses a "Grid" system to create a sidebar for skills and a main area for projects, which is standard for DevOps resumes.
+
+Icons: I included FontAwesome to add icons for LinkedIn, GitHub, Phone, and Email, making it look modern.
+
+Contact Info: I consolidated your contact details into the header for better visibility. 
+
+[cite_start]
+
+Clickable Links: The GitHub repository links for your CI/CD and Three-Tier application projects are clickable.-->
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -528,34 +860,44 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">HTML</h5>
-                <data value="100">100%</data>
+                <h5 class="h5">Docker</h5>
+                <data value="80">80%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
 
             </li>
-
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">CSS</h5>
-                <data value="100">100%</data>
+                <h5 class="h5">Kubernetes</h5>
+                <data value="50">80%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 100%;"></div>
+                <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
 
             </li>
-
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">JavaScript</h5>
-                <data value="90">90%</data>
+                <h5 class="h5">Jenkins</h5>
+                <data value="50">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Amazon Web Services</h5>
+                <data value="70">90%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -563,7 +905,30 @@
               </div>
 
             </li>
+            <li class="skills-item">
 
+              <div class="title-wrapper">
+                <h5 class="h5">Terraform</h5>
+                <data value="80">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Ansible</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
             <li class="skills-item">
 
               <div class="title-wrapper">
@@ -579,57 +944,32 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">React.Js</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">HTML</h5>
+                <data value="100">100%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
+                <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
 
             </li>
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">OOPs Concept</h5>
-                <data value="80">80%</data>
+                <h5 class="h5">CSS</h5>
+                <data value="100">100%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
+                <div class="skill-progress-fill" style="width: 100%;"></div>
               </div>
 
             </li>
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Node JS</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5"> Basic Java</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">JavaScript</h5>
+                <data value="90">50%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -637,9 +977,12 @@
               </div>
 
             </li>
+           
+            
 
+      
           </ul>
-          <a href="https://drive.google.com/file/d/1ziZGQKVwer9iHqarkp70KwYI_esdnRO9/view?usp=drivesdk">
+          <a href="https://drive.google.com/file/d/1tjezRZNtv-IeRNbk2F4SvoI5Vs_JjqwV/view?usp=drive_link">
           <button class="stylish-button">View Resume</button>
 </a>
 
