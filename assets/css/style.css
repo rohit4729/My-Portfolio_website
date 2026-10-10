@@ -1114,6 +1114,26 @@ footer p:hover {
 .project-title,
 .project-category { margin-left: 10px; }
 
+/* Keep project titles and descriptions white */
+.project-item > a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.project-item > a .project-title,
+.project-item > a .project-category {
+    color: #ffffff !important;
+}
+
+/* Keep text white when hovering over project links */
+.project-item > a:hover .project-title,
+.project-item > a:hover .project-category {
+    color: #ffffff !important;
+}
+
+.project-category {
+  color: #ffffff !important;
+}
 .project-title {
   color: var(--white-2);
   font-size: var(--fs-5);
@@ -1123,7 +1143,7 @@ footer p:hover {
 }
 
 .project-category {
-  color: var(--light-gray-70);
+  color: #ffffff;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
